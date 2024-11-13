@@ -9,5 +9,5 @@ sayHi(names.john)
 sayHi(names.peter)
  
 sayHi(names.anna)
-console.log(data.items.bob)
-sayHi(data.items.nik)
+console.log(data.persons.bob)
+sayHi(data.persons.nik)
