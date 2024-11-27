@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>Home page</h1>
+    <p>Welcome</p>
+    <div>
+        <button id="loadProductsBtn">Load Products</button>
+        <button id="sortMinPriceBtn">Sort by Min Price</button>
+        <button id="sortMaxPriceBtn">Sort by Max Price</button>
+    </div>
+    <div>
+        <input id="searchInput" type="text" placeholder="Search by product name" />
+        <input id="regexInput" type="text" placeholder="Search by part of name" />
+        <input id="maxPriceInput" type="number" placeholder="Max price" />
+        <button id="filterBtn">Apply Filters</button>
+    </div>
+    <div id="productsDisplay"></div>
+
+
+    <script src="product.js"></script>
+</body>
+
+</html>
