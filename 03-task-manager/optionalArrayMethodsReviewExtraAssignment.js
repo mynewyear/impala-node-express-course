@@ -154,8 +154,52 @@ const names = [
   'Carlos d. Perez',
   'tam  person',
   'Mariana Gomez',
-  'Amy You'
+  'Amy You',
+  'Timothy      Cook',
+  'Nick_Masters',
+  'Timmy-Turner',
+  'Billy\nBob',
 ];
+
+// - Create a new array with only each person's last name
+// - Filter names that don't match the format "<first> <last>"
+//   - Should remove Tam because she has a double-space
+//   - Should remove Carlow because he has a middle-name
+
+const validNames = names.filter((name) => name.split(" ").length === 2);
+const withLastNames = validNames.map((name) => name.split(" ")[1]);
+console.log("CHALLENGE_01");
+console.log(withLastNames);
+
+// - Create a new array where everyone's name is converted to "Title Case"
+//   - The first character of each word should be uppercase
+//   - All other characters in the word should be lowercase
+//   - expected output is ['Dimitry Santiago', 'Carlos D. Perez', 'Tam Person', ...]
+
+const convertedNames = names.map((name) => name.replace(/\s+/g, " ").trim());
+
+const titleCase = names.map((name) =>
+  name
+    .replace(/[_\-\n]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .map((word) =>
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    )
+    .join(" ")
+);
+console.log("CHALLENGE_02");
+console.log(titleCase);
+
+// - Last Challenge:
+//     Remove names with the wrong format
+//     AND change it to "Title Case"
+//     AND remove people whose last name ends with z
+const namesWithoutZ = titleCase.filter((name) => !name.split(" ")[1].endsWith('z'));
+//     AND write a message asking them to sign up
+console.log("CHALLENGE_03");
+namesWithoutZ.forEach((name) => console.log(`${name}, please sign up!`));
+
 
 ///////////////////////////////////////////////////////////////////////////////
 //// put your answers above if you wish to do the challenges on your own //////
